@@ -31,7 +31,17 @@ canvas {
     padding: 0px;
     margin: 0px;
 }
+#container__normas {
+    display: flex;
+    flex-direction: column;
+}
+.normas {
+    list-style: none;
 
+}
+.norma {
+    margin: 2rem;
+}
 #lives {
     font-size: 40px;
     color: #c6c6c6;
