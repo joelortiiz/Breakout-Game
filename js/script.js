@@ -1,7 +1,5 @@
-
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-
 
 let jugar = document.getElementById("jugar");
 
@@ -52,10 +50,10 @@ class Bola {
     constructor(canvas, nivel) {
         // Tamaño de la bola
         this.radio = 10;
-        // Si nivel es igual a 1, la bola se moverá horizontalmente a 4px, si no, se mueve a 5px
-        this.dx = nivel === 1 ? 4 : 5;
+        // Si nivel es igual a 1, la bola se moverá horizontalmente a 4px, si no, se mueve a 3px (modificado)
+        this.dx = nivel === 1 ? 3 : 4;  // Modificación de la velocidad de la bola
         // Velocidad vertical de la bola
-        this.dy = -5;
+        this.dy = -1;  // Modificación de la velocidad de la bola
         this.resetearPosicion(canvas);
     }
 
@@ -65,7 +63,7 @@ class Bola {
 
     resetearPosicion(canvas) {
         this.x = canvas.width / 2;
-        this.y = canvas.height - 40;
+        this.y = canvas.height - 20;
     }
 }
 
@@ -288,5 +286,3 @@ const empezarJuego = () => {
 document.addEventListener("keydown", moverBarra);
 jugar.addEventListener("click", empezarJuego)
 botonReiniciar.addEventListener("click", reiniciarBoton);
-
-
